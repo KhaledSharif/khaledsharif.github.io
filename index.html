@@ -43,10 +43,10 @@
         line-height: 20px;
         text-align: justify;
         text-justify: inter-word;
+        background: rgba(0, 0, 0, 0.5)
     }
 
-    .heading-modifiers
-    {
+    .heading-modifiers {
         font-size: 18px;
         text-align: left;
     }
@@ -63,9 +63,14 @@
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
-    .footer-modifiers
-    {
+    .footer-modifiers {
         margin-top: 300px;
+    }
+
+    .shadow {
+        -moz-box-shadow: 5px 5px 30px 2px #000;
+        -webkit-box-shadow: 5px 5px 30px 2px #000;
+        box-shadow: 5px 5px 30px 2px #000;
     }
 </style>
 
@@ -79,10 +84,14 @@
                 Menu <i class="fa fa-bars"></i>
             </button>
             <span style="font-size: 30px; margin-left: 10px; margin-right: 10px">
-                <a href="https://www.facebook.com/kldsrf"><i class="fa fa-facebook-square fa-modifiers" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/kldsrf"><i class="fa fa-twitter-square fa-modifiers" aria-hidden="true"></i></a>
-                <a href="https://github.com/KhaledSharif"><i class="fa fa-github-square fa-modifiers" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/khsharif"><i class="fa fa-linkedin-square fa-modifiers" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/kldsrf"><i class="fa fa-facebook-square fa-modifiers"
+                                                             aria-hidden="true"></i></a>
+                <a href="https://twitter.com/kldsrf"><i class="fa fa-twitter-square fa-modifiers"
+                                                        aria-hidden="true"></i></a>
+                <a href="https://github.com/KhaledSharif"><i class="fa fa-github-square fa-modifiers"
+                                                             aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/khsharif"><i class="fa fa-linkedin-square fa-modifiers"
+                                                                  aria-hidden="true"></i></a>
             </span>
 
         </div>
@@ -131,19 +140,21 @@
 
 <!-- About Section -->
 <section id="about" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <img src="img/profile-picture.png" style="margin-bottom: 20px"/>
-            <h2>About Myself</h2>
-            <p class="p-modifiers">
-                I am an electrical and computer engineer that is passionate about high performance computing,
-                cryptography, machine learning, and big data analysis. I have worked in the past on projects that
-                are deeply involved in computer programming, highly efficient algorithms, and advanced mathematics.
-            </p>
-            <p class="p-modifiers">
-                I am also interested in the strong link between computer software and hardware, and I aim to
-                further the fields of alternative computer architecture and super computing.
-            </p>
+    <div class="about-section">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2" style="margin-bottom: 600px">
+                <img src="img/profile-picture.png" style="margin-bottom: 20px"/>
+                <h2>About Myself</h2>
+                <p class="p-modifiers">
+                    I am an electrical and computer engineer that is passionate about high performance computing,
+                    cryptography, machine learning, and big data analysis. I have worked in the past on projects that
+                    are deeply involved in computer programming, highly efficient algorithms, and advanced mathematics.
+                </p>
+                <p class="p-modifiers">
+                    I am also interested in the strong link between computer software and hardware, and I aim to
+                    further the fields of alternative computer architecture and super computing.
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -159,14 +170,15 @@
                     <tr>
                         <th>
                             <a href="http://worldwind.arc.nasa.gov/worldweather/">
-                                <div class="card card-modifiers">
+                                <div class="card card-modifiers shadow">
                                     <div class="card-image">
                                         <figure class="image is-4by3">
                                             <img src="img/project-1.jpg" alt="">
                                         </figure>
                                     </div>
                                     <div class="card-content">
-                                        <p class="heading-modifiers">NASA World Weather: the largest three dimensional web based interactive
+                                        <p class="heading-modifiers">NASA World Weather: the largest three dimensional
+                                            web based interactive
                                             browser of
                                             satellite, weather, climate, and other publicly available time aware
                                             geo-spatial data.</p>
@@ -182,18 +194,42 @@
                                 </div>
                             </a>
 
+                            <br/>
+
+                            <a href="http://worldwind.arc.nasa.gov/worldweather/">
+                                <div class="card card-modifiers shadow">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img src="img/project-1.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="heading-modifiers">NASA World Weather: the largest three dimensional
+                                            web based interactive
+                                            browser of
+                                            satellite, weather, climate, and other publicly available time aware
+                                            geo-spatial data.</p>
+                                        <p><i>World Weather is the first web application to display a broad range of
+                                            weather
+                                            studying climate change, and intrigued planetary data
+                                            enthusiasts.</i></p>
+                                    </div>
+                                </div>
+                            </a>
+
                         </th>
 
                         <th>
                             <a href="https://github.com/KhaledSharif/quantopian-ensemble-methods">
-                                <div class="card card-modifiers">
+                                <div class="card card-modifiers shadow">
                                     <div class="card-image">
                                         <figure class="image is-4by3">
                                             <img src="img/project-2.jpg" alt="">
                                         </figure>
                                     </div>
                                     <div class="card-content">
-                                        <p class="heading-modifiers">Bachelors Thesis: Investigating Algorithmic Stock Market Trading using
+                                        <p class="heading-modifiers">Bachelors Thesis: Investigating Algorithmic Stock
+                                            Market Trading using
                                             Efficient
                                             Ensemble
                                             Techniques</p>
@@ -211,18 +247,44 @@
                                 </div>
                             </a>
 
-                        </th>
-                           
-                        <th>
+                            <br/>
+
                             <a href="https://github.com/KhaledSharif/rubiks-encrypt">
-                                <div class="card card-modifiers">
+                                <div class="card card-modifiers shadow">
                                     <div class="card-image">
                                         <figure class="image is-4by3">
                                             <img src="img/project-3.jpg" alt="">
                                         </figure>
                                     </div>
                                     <div class="card-content">
-                                        <p class="heading-modifiers">Rubik's Encrypt: an encryption and decryption scheme based on the "Rubiks Cube"
+                                        <p class="heading-modifiers">Rubik's Encrypt: an encryption and decryption
+                                            scheme based on the "Rubiks Cube"
+                                            principle.</p>
+                                        <p><i>
+                                            This was a Python project that was inspired by the "An Efficient
+                                            image encryption algorithm based on blocks
+                                            permutation and rubik's cube principle for iris images" paper by Khaled,
+                                            Makram,
+                                            and Khalil. Encryption algorithm based on blocks
+                                            permutation and rubik's cube principle for iris images" paper by Khaled,
+                                            Makram.</i></p>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </th>
+                           
+                        <th>
+                            <a href="https://github.com/KhaledSharif/rubiks-encrypt">
+                                <div class="card card-modifiers shadow">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img src="img/project-3.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="heading-modifiers">Rubik's Encrypt: an encryption and decryption
+                                            scheme based on the "Rubiks Cube"
                                             principle.</p>
                                         <p><i>
                                             This was a Python project that was inspired by the "An Efficient
@@ -230,6 +292,35 @@
                                             permutation and rubik's cube principle for iris images" paper by Khaled,
                                             Makram,
                                             and Khalil.</i></p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <br/>
+
+                            <a href="https://github.com/KhaledSharif/quantopian-ensemble-methods">
+                                <div class="card card-modifiers shadow">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                            <img src="img/project-2.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="heading-modifiers">Bachelors Thesis: Investigating Algorithmic Stock
+                                            Market Trading using
+                                            Efficient
+                                            Ensemble
+                                            Techniques</p>
+                                        <p><i>Recent advances in the machine learning field have given rise to
+                                            efficient ensemble methods that accurately forecast time-series. In this
+                                            project, we
+                                            used the Quantopian algorithmic stock market trading simulator to assess
+                                            ensemble
+                                            method performance in daily prediction and trading; simulation results
+                                            showed
+                                            significant returns relative to the benchmark and strengthen the role of
+                                            machine
+                                            learning in stock market trading.</i></p>
                                     </div>
                                 </div>
                             </a>
@@ -272,11 +363,14 @@
 
 
 <!-- Footer -->
-<footer class="footer-modifiers">
+<div class="footer-section">
+<footer class="footer-modifiers" style="margin-bottom: 200px">
     <div class="container text-center">
+        <br/><br/>
         <p>Copyright &copy; Khaled Sharif, 2016</p>
     </div>
 </footer>
+</div>
 
 <!-- jQuery -->
 <script src="vendor/jquery/jquery.js"></script>
