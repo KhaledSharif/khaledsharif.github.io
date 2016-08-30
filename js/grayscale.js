@@ -41,7 +41,7 @@ function continuallyAdjust() {
         var newElement;
         var appended = "";
         if (screenHeight > screenWidth) {
-            tableSelector.css('margin-left', '-10px');
+            tableSelector.css('margin-left', '-15px');
             appended += "<tr><th>";
             for (var j = 0; j < projectsObjects.length; j++) {
                 newElement = document.templateHTML;
@@ -106,7 +106,7 @@ function adjustForMobile() {
                     var newElement;
 
                     if (screenHeight > screenWidth) {
-                        tableSelector.css('margin-left', '-10px');
+                        tableSelector.css('margin-left', '-15px');
 
                         appended += "<tr><th>";
                         for (var j = 0; j < projectsObjects.length; j++) {
