@@ -1,0 +1,24 @@
+NASA World Weather: the largest three dimensional web based interactive browser of satellite, weather, climate, and other publicly available time aware geo-spatial data.
+World Weather is the first web application to display a broad range of weather and other geo-spatial data in three and four dimensions. It gives the world community a customizable experience that can be utilized by weather forecasters, research scientists studying climate change, and intrigued planetary data enthusiasts.
+project-1.jpg
+http://worldwind.arc.nasa.gov/worldweather/
+Bachelors Thesis: Investigating Algorithmic Stock Market Trading using Efficient Ensemble Techniques
+Recent advances in the machine learning field have given rise to efficient ensemble methods that accurately forecast time-series. In this project, we used the Quantopian algorithmic stock market trading simulator to assess ensemble method performance in daily prediction and trading; simulation results showed significant returns relative to the benchmark and strengthen the role of machine learning in stock market trading.
+project-2.jpg
+https://github.com/KhaledSharif/quantopian-ensemble-methods
+Rubik's Encrypt: an encryption and decryption scheme based on the "Rubiks Cube" principle.
+This was a Python project that was inspired by the "An Efficient image encryption algorithm based on blocks permutation and rubik's cube principle for iris images" paper by Khaled, Makram, and Khalil.
+project-3.jpg
+https://github.com/KhaledSharif/rubiks-encrypt
+Bachelors Thesis: Investigating Algorithmic Stock Market Trading using Efficient Ensemble Techniques
+Recent advances in the machine learning field have given rise to efficient ensemble methods that accurately forecast time-series. In this project, we used the Quantopian algorithmic stock market trading simulator to assess ensemble method performance in daily prediction and trading; simulation results showed significant returns relative to the benchmark and strengthen the role of machine learning in stock market trading.
+project-2.jpg
+https://github.com/KhaledSharif/quantopian-ensemble-methods
+NASA World Weather: the largest three dimensional web based interactive browser of satellite, weather, climate, and other publicly available time aware geo-spatial data.
+World Weather is the first web application to display a broad range of weather and other geo-spatial data in three and four dimensions. It gives the world community a customizable experience that can be utilized by weather forecasters, research scientists studying climate change, and intrigued planetary data enthusiasts.
+project-1.jpg
+http://worldwind.arc.nasa.gov/worldweather/
+Rubik's Encrypt: an encryption and decryption scheme based on the "Rubiks Cube" principle.
+This was a Python project that was inspired by the "An Efficient image encryption algorithm based on blocks permutation and rubik's cube principle for iris images" paper by Khaled, Makram, and Khalil.
+project-3.jpg
+https://github.com/KhaledSharif/rubiks-encrypt

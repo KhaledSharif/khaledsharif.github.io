@@ -1,10 +1,8 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+$(window).scroll(collapseNavbar);
+$(window).resize(continuallyAdjust);
+$(document).ready(collapseNavbar);
+$(document).ready(adjustForMobile);
 
-// jQuery to collapse the navbar on scroll
 function collapseNavbar() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
@@ -13,12 +11,8 @@ function collapseNavbar() {
     }
 }
 
-$(window).scroll(collapseNavbar);
-$(document).ready(collapseNavbar);
-
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
+$(function () {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -27,159 +21,132 @@ $(function() {
     });
 });
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+$('.navbar-collapse ul li a').click(function () {
     $(this).closest('.collapse').collapse('toggle');
 });
 
-// Google Maps Scripts
-var map = null;
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
-});
+function continuallyAdjust() {
+    var screenWidth = window.innerWidth, screenHeight = window.innerHeight;
+    if (screenWidth > screenHeight && document.isPortrait) {
+        document.isPortrait = false;
+    } else if (screenWidth < screenHeight && !document.isPortrait) {
+        document.isPortrait = true;
+    } else {
+        return null;
+    }
 
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 15,
+    if (document.templateHTML && document.projectsObjects) {
+        var projectsObjects = document.projectsObjects;
+        var tableSelector = $("#projects-html");
+        var newElement;
+        var appended = "";
+        if (screenHeight > screenWidth) {
+            tableSelector.css('margin-left', '20px');
+            appended += "<tr><th>";
+            for (var j = 0; j < projectsObjects.length; j++) {
+                newElement = document.templateHTML;
+                newElement = newElement.replace('PROJECT-TEMPLATE-HEADING', projectsObjects[j].heading);
+                newElement = newElement.replace('PROJECT-TEMPLATE-TEXT', projectsObjects[j].text);
+                newElement = newElement.replace('PROJECT-TEMPLATE-URL', projectsObjects[j].url);
+                newElement = newElement.replace('PROJECT-TEMPLATE-IMG', projectsObjects[j].image);
+                appended += newElement + "<br/>";
+            }
+            appended += "</th></tr>";
+        } else {
+            tableSelector.css('margin-left', '-150px');
+            appended += "<tr>";
+            var p, q, temp_array, chunk = parseInt(projectsObjects.length / 3);
+            for (p = 0, q = projectsObjects.length; p < q; p += chunk) {
+                temp_array = projectsObjects.slice(p, p + chunk);
 
-        // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+                appended += "<th>";
+                for (var k = 0; k < temp_array.length; k++) {
+                    newElement = document.templateHTML;
+                    newElement = newElement.replace('PROJECT-TEMPLATE-HEADING', temp_array[k].heading);
+                    newElement = newElement.replace('PROJECT-TEMPLATE-TEXT', temp_array[k].text);
+                    newElement = newElement.replace('PROJECT-TEMPLATE-URL', temp_array[k].url);
+                    newElement = newElement.replace('PROJECT-TEMPLATE-IMG', temp_array[k].image);
+                    appended += newElement + "<br/>";
+                }
+                appended += "</th>";
+            }
+            appended += "</tr>";
+        }
+        tableSelector.html(appended);
+    }
+}
 
-        // Disables the default Google Maps UI components
-        disableDefaultUI: true,
-        scrollwheel: false,
-        draggable: false,
+function adjustForMobile() {
+    var screenWidth = window.innerWidth, screenHeight = window.innerHeight;
+    document.isPortrait = screenWidth <= screenHeight;
 
-        // How you would like to style the map. 
-        // This is where you would paste any style found on Snazzy Maps.
-        styles: [{
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 29
-            }, {
-                "weight": 0.2
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 18
-            }]
-        }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 21
-            }]
-        }, {
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "on"
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 40
-            }]
-        }, {
-            "elementType": "labels.icon",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 19
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }, {
-                "weight": 1.2
-            }]
-        }]
-    };
+    $.ajax({
+        url: 'js/project-template.html',
+        success: function (templateHTML) {
+            document.templateHTML = templateHTML;
+            $.ajax({
+                url: 'js/projects.txt',
+                success: function (projectsString) {
+                    var projectsArray = projectsString.split('\n');
+                    var projectsObjects = [];
 
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map');
+                    var appended = "";
 
-    // Create the Google Map using out element and options defined above
-    map = new google.maps.Map(mapElement, mapOptions);
+                    var tableSelector = $("#projects-html");
 
-    // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(40.6700, -73.9400);
-    var beachMarker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        icon: image
+                    for (var i = 0; i < projectsArray.length - 1; i += 4) {
+                        projectsObjects.push({
+                            heading: projectsArray[i], text: projectsArray[i + 1],
+                            image: projectsArray[i + 2], url: projectsArray[i + 3]
+                        });
+                    }
+
+                    document.projectsObjects = projectsObjects;
+
+                    var newElement;
+
+                    if (screenHeight > screenWidth) {
+                        tableSelector.css('margin-left', '20px');
+
+                        appended += "<tr><th>";
+                        for (var j = 0; j < projectsObjects.length; j++) {
+                            newElement = templateHTML;
+                            newElement = newElement.replace('PROJECT-TEMPLATE-HEADING', projectsObjects[j].heading);
+                            newElement = newElement.replace('PROJECT-TEMPLATE-TEXT', projectsObjects[j].text);
+                            newElement = newElement.replace('PROJECT-TEMPLATE-URL', projectsObjects[j].url);
+                            newElement = newElement.replace('PROJECT-TEMPLATE-IMG', projectsObjects[j].image);
+                            appended += newElement + "<br/>";
+                        }
+                        appended += "</th></tr>";
+                    } else {
+                        tableSelector.css('margin-left', '-150px');
+
+                        appended += "<tr>";
+
+                        var p, q, temp_array, chunk = parseInt(projectsObjects.length / 3);
+                        for (p = 0, q = projectsObjects.length; p < q; p += chunk) {
+                            temp_array = projectsObjects.slice(p, p + chunk);
+
+                            appended += "<th>";
+                            for (var k = 0; k < temp_array.length; k++) {
+                                newElement = templateHTML;
+                                newElement = newElement.replace('PROJECT-TEMPLATE-HEADING', temp_array[k].heading);
+                                newElement = newElement.replace('PROJECT-TEMPLATE-TEXT', temp_array[k].text);
+                                newElement = newElement.replace('PROJECT-TEMPLATE-URL', temp_array[k].url);
+                                newElement = newElement.replace('PROJECT-TEMPLATE-IMG', temp_array[k].image);
+                                appended += newElement + "<br/>";
+                            }
+                            appended += "</th>";
+                        }
+
+                        appended += "</tr>";
+                    }
+
+                    tableSelector.html(appended);
+                }
+            });
+        }
     });
+
+
 }
