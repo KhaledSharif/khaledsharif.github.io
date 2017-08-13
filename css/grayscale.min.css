@@ -41,9 +41,10 @@ p {
 
 @media (min-width: 768px) {
     p {
+        font-family: 'Noto Serif', serif;
         margin:0 0 35px;
         font-size: 15px;
-        text-align: justify;
+        text-align: center;
         line-height: 1.1;
         text-justify: inter-word;
     }
@@ -160,7 +161,9 @@ a:focus,a:hover {
 }
 
 .intro .intro-body .intro-text {
-    font-size: 18px
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -174,7 +177,7 @@ a:focus,a:hover {
     }
 
     .intro .intro-body .intro-text {
-        font-size: 19px;
+        font-size: 18px;
     }
 }
 

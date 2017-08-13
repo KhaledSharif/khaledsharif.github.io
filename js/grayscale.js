@@ -95,10 +95,13 @@ function adjustForMobile() {
                     var tableSelector = $("#projects-html");
 
                     for (var i = 0; i < projectsArray.length - 1; i += 4) {
-                        projectsObjects.push({
-                            heading: projectsArray[i], text: projectsArray[i + 1],
-                            image: projectsArray[i + 2], url: projectsArray[i + 3]
-                        });
+                        if (projectsArray[i] && projectsArray[i + 1] && projectsArray[i + 2] && projectsArray[i + 3])
+                        {
+                            projectsObjects.push({
+                                heading: projectsArray[i], text: projectsArray[i + 1],
+                                image: projectsArray[i + 2], url: projectsArray[i + 3]
+                            });
+                        }
                     }
 
                     document.projectsObjects = projectsObjects;
