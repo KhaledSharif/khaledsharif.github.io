@@ -12,7 +12,7 @@
     <title>Khaled Sharif: Personal Website</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="../css/grayscale.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +30,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="../css/bulma.css">
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400i" rel="stylesheet">
@@ -84,11 +84,6 @@
     .banner-buttons-modifier .btn-lg {
         font-size: 14px
     }
-
-    footer p {
-        padding-left: 15vw;
-        padding-right: 15vw;
-    }
 </style>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -120,7 +115,7 @@
                     <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#projects">Projects</a>
+                    <a class="page-scroll" href="#download">Projects</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="./publications/">Publications</a>
@@ -149,10 +144,7 @@
                         Electrical and computer engineer. Born in London. 
                         Interested in machine learning, weather prediction, 
                         and computer simulations. Occasional swimmer and biker. 
-                        Check out my 
-                        <a href="./research/">research</a>, 
-                        <a href="#projects">projects</a>, and 
-                        <a href="./publications/">publications</a>, or 
+                        Check out my research, projects, and publications, or 
                         scroll down.</p>
                     <a href="#about" class="btn btn-circle page-scroll">
                         <i class="fa fa-angle-double-down animated"></i>
@@ -168,7 +160,7 @@
     <div class="about-section">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2" style="margin-bottom: 700px">
-                <img src="img/profile-picture.png" style="margin-bottom: 20px"/>
+                <img src="../img/profile-picture.png" style="margin-bottom: 20px"/>
                 <h2>About Myself</h2>
                 <p class="p-modifiers">
                     I graduated from the University of Jordan as a computer engineer; my bachleor's thesis investigated the use of ensemble based
@@ -186,9 +178,9 @@
     </div>
 </section>
 
-<!-- projects Section -->
-<section id="projects" class="content-section text-center">
-    <div class="projects-section">
+<!-- Download Section -->
+<section id="download" class="content-section text-center">
+    <div class="download-section">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>My Projects</h2>
@@ -208,29 +200,29 @@
             <h2>My Contact Information</h2>
             <p>Feel free to <a href="mailto:kldsrf@gmail.com">email me</a> about job offers, project collaboration
                 requests, questions about my projects, or just to say hello! You can also reach me on any of the social
-                media platforms listed below. Be sure to check out my research and publications on their separate pages.</p>
+                media platforms listed below. Be sure to check out my research and publications at their separate pages.</p>
             <br/><br/>
             <ul class="list-inline banner-social-buttons banner-buttons-modifier">
                 <li>
-                    <a href="./research/" class="btn btn-default btn-lg"><i
-                            class="fa fa-flask fa-fw"></i> <span class="network-name">Research</span></a>
+                    <a href="https://twitter.com/kldsrf" class="btn btn-default btn-lg"><i
+                            class="fa fa-twitter fa-fw"></i> <span class="network-name">Research</span></a>
                 </li>
 
                 <li>
-                    <a href="./publications/" class="btn btn-default btn-lg"><i
-                            class="fa fa-file-code-o fa-fw"></i> <span class="network-name">Publications</span></a>
+                    <a href="https://twitter.com/kldsrf" class="btn btn-default btn-lg"><i
+                            class="fa fa-twitter fa-fw"></i> <span class="network-name">Publications</span></a>
                 </li>
                 <li>
-                    <a href="mailto:kldsrf@gmail.com" class="btn btn-default btn-lg"><i
-                            class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
+                    <a href="https://twitter.com/kldsrf" class="btn btn-default btn-lg"><i
+                            class="fa fa-twitter fa-fw"></i> <span class="network-name">Email</span></a>
                 </li>
                 <li>
                     <a href="https://github.com/KhaledSharif" class="btn btn-default btn-lg"><i
                             class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/khsharif" class="btn btn-default btn-lg"><i
-                            class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
+                    <a href="https://plus.google.com/u/0/+KhaledSharif1993" class="btn btn-default btn-lg"><i
+                            class="fa fa-google-plus fa-fw"></i> <span class="network-name">LinkedIn</span></a>
                 </li>   
             </ul>
         </div>
@@ -243,27 +235,22 @@
 <footer class="footer-modifiers" style="margin-bottom: 200px">
     <div class="container text-center">
         <br/><br/>
-        <p>"Everything around you that you call life was made up by people 
-            that were no smarter than you and you can change it, you can 
-            influence it, you can build your own things that other people can use. 
-            Once you learn that, you'll never be the same again."</p>
-        <br/>
-        <p>–Steve Jobs</p>
+        <p>Copyright &copy; Khaled Sharif, 2017</p>
     </div>
 </footer>
 </div>
 
 <!-- jQuery -->
-<script src="vendor/jquery/jquery.js"></script>
+<script src="../vendor/jquery/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="js/grayscale.js"></script>
+<script src="../js/grayscale.js"></script>
 
 </body>
 
